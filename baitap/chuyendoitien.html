@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+		<span>Amount</span>
+		<input type="text" id="a">
+		<span>From Currency</span>
+		<select id="fromcurrency"><option value="23000">VND</option><option value="1">USD</option></select>
+		<span>To Currency</span>
+		<select id="tocurrency"><option value="1">USD</option><option value="23000">VND</option></select>
+		<button onclick="Convert();">Convert</button>
+		<h3 id="Result" style="color:blue"></h3>
+	<script>
+		function Convert(){
+            var amount = parseInt(document.getElementById("a").value);
+            var rate = document.getElementById("tocurrency").value/document.getElementById("fromcurrency").value;
+            var result = amount*rate;
+            document.getElementById("Result").innerHTML = "Result: " + result;
+        } 
+		
+	</script>
+</body>
+</html>

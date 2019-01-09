@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<form >
+	
+	<div>
+		<span><input type="number" id="nhapa"></span>
+		<span><input type="number" id="nhapb"></span>
+	</div>
+	<br>
+	
+	</form>
+	<div>&emsp;&nbsp;
+		<button onclick="Cong();">Cộng(+)</button>&emsp;
+		<button onclick="Tru();">Trừ(-)</button>&emsp;
+		<button onclick="Nhan();">Nhân(x)</button>&emsp;
+		<button onclick="Chia();">Chia(/)</button>&emsp;
+	</div>
+		<h3 id="Result" style="color:blue"></h3>
+	<script>
+		function Cong(){
+			var nhapa = parseInt(document.getElementById("nhapa").value);
+			var nhapb = parseInt(document.getElementById("nhapb").value);
+			var Result = nhapa+nhapb;
+			document.getElementById("Result").innerHTML = "Result: " + Result;
+		}
+		function Tru(){
+			var nhapa = parseInt(document.getElementById("nhapa").value);
+			var nhapb = parseInt(document.getElementById("nhapb").value);
+			var Result = nhapa-nhapb;
+			document.getElementById("Result").innerHTML = "Result: " + Result;
+		}
+		function Nhan(){
+			var nhapa = parseInt(document.getElementById("nhapa").value);
+			var nhapb = parseInt(document.getElementById("nhapb").value);
+			var Result = nhapa*nhapb;
+			document.getElementById("Result").innerHTML = "Result: " + Result;
+		}
+		function Chia(){
+			var nhapa = parseInt(document.getElementById("nhapa").value);
+			var nhapb = parseInt(document.getElementById("nhapb").value);
+			var Result = nhapa/nhapb;
+			document.getElementById("Result").innerHTML = "Result: " + Result;
+		}
+
+	</script>
+</body>
+</html>
