@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html> 
+<head>     
+	<meta charset="utf-8">     
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">     
+	<title></title>     
+	<linkrel="stylesheet" href=""> 
+</head> 
+<body>     
+	<form action="">         
+		<input type="number" min = 0 max=12 id="day" >     
+	</form>     
+	<div id="Result"></div>     
+	<br>     
+	<div>
+		<button onclick="Tinhsongay();">Tính Số Ngày</button>
+		</div>     
+		<br>     
+		<script>         
+		function Tinhsongay(){
+		var ngay= parseInt(document.getElementById("day").value);             
+		switch(ngay) {                 
+				case 1:
+				document.getElementById("Result").innerHTML = "tháng 1 có 31 ngày";
+				break;                
+			 case 3:
+				document.getElementById("Result").innerHTML = "tháng 3 có 31 ngày";
+				break;                 
+			case 5:
+				document.getElementById("Result").innerHTML = "tháng 5 có 31 ngày";
+				break;                 
+			case 7:
+				document.getElementById("Result").innerHTML = "tháng 7 có 31 ngày";
+				break;                 
+			case 8:
+				document.getElementById("Result").innerHTML = "tháng 8 có 31 ngày";
+				break;                 
+			case 10:
+				document.getElementById("Result").innerHTML = "tháng 10 có 31 ngày";
+				break;                 
+			case 12:
+				document.getElementById("Result").innerHTML = "tháng 12 có 31 ngày";
+				break;                 
+			case 4:
+				document.getElementById("Result").innerHTML = "tháng 4 có 30 ngày";
+				break;                 
+			case 6:
+				document.getElementById("Result").innerHTML = "tháng 6 có 30 ngày";
+				break;                 
+			case 9:
+				document.getElementById("Result").innerHTML = "tháng 9 có 30 ngày";
+				break;                 
+			case 11:
+				document.getElementById("Result").innerHTML = "tháng 11 có 30 ngày";
+				break;                 
+			case 2:
+				document.getElementById("Result").innerHTML = "tháng 2 có 28 ngày hoặc 29ngày";                 
+				break;             
+			}         
+		}     
+</script> 
+</body>
+</html>

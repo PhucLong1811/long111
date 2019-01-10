@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="D:\bootstrap/css/bootstrap.min.css">
+	<style>
+		table{
+			background: #808080;
+			margin: auto;
+		}
+		.btn{
+			width: 35px;
+			height: 32px;
+			margin: 3px;	
+		}
+		input{
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	 <table>
+	 	<tr>
+	 		<td colspan="4"><input id="number" name="number" type="text"></td>
+	 	</tr>
+		<tr>
+			<td><button class="btn" id="1" onclick="addNumber(this.id)">1</button></td>
+			<td><button class="btn" id="2" onclick="addNumber(this.id)">2</button></td>
+			<td><button class="btn" id="3" onclick="addNumber(this.id)">3</button></td>
+			<td><button class="btn" id="cong" onclick="pheptoan(this.id)">+</button></td>
+		</tr>
+		<tr>
+			<td><button class="btn" id="4" onclick="addNumber(this.id)">4</button></td>
+			<td><button class="btn" id="5" onclick="addNumber(this.id)">5</button></td>
+			<td><button class="btn" id="6" onclick="addNumber(this.id)">6</button></td>
+			<td><button class="btn" id="tru" onclick="pheptoan(this.id)">-</button></td>
+		</tr>
+		<tr>
+			<td><button class="btn" id="7" onclick="addNumber(this.id)">7</button></td>
+			<td><button class="btn" id="8" onclick="addNumber(this.id)">8</button></td>
+			<td><button class="btn" id="9" onclick="addNumber(this.id)">9</button></td>
+			<td><button class="btn" id="nhan" onclick="pheptoan(this.id)">x</button></td>
+		</tr>
+		<tr>
+			<td><button class="btn" id="0" onclick="addNumber(this.id)">0</button></td>
+			<td><button class="btn" id="C" onclick="number.value=''">C</button></td>
+			<td><button class="btn" id="bang" onclick="ketqua()">=</button></td>
+			<td><button class="btn" id="chia" onclick="pheptoan(this.id)">/</button></td>
+		</tr>
+ 	 </table>
+ 	 <script>
+ 	 	var number1 = 0;
+ 	 	var tempheptoan = "";
+ 	 	function addNumber (id){
+ 	 		temNumber = document.getElementById("number").value;
+ 	 		document.getElementById("number").value = temNumber+id;
+ 	 	}
+ 	 	function pheptoan (id){
+ 	 		number1 = document.getElementById("number").value;
+ 	 		document.getElementById("number").value ="";
+ 	 		tempheptoan = id;
+ 	 	}
+ 	 	function ketqua() {
+ 	 		temNumber = document.getElementById("number").value;
+ 	 		switch(tempheptoan){
+ 	 			case "cong":
+	 	 			ketquapheptoan = parseFloat(temNumber) + parseFloat(number1);
+	 	 			break;
+ 	 			case "tru":
+	 	 			ketquapheptoan = parseFloat(temNumber) - parseFloat(number1);
+	 	 			break;
+ 	 			case "nhan":
+	 	 			ketquapheptoan = parseFloat(temNumber) * parseFloat(number1);
+	 	 			break;
+ 	 			case "chia":
+	 	 			ketquapheptoan = parseFloat(temNumber) / parseFloat(number1);
+	 	 			break;
+ 	 		}
+ 	 		document.getElementById("number").value = ketquapheptoan;
+ 	 	}
+ 	 </script>
+
+</body>
+</html>
+</body>
+</html>

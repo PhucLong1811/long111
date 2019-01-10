@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<style>
+#hoctudau {
+width: 600px;
+margin: 50px auto;
+}
+#convert_hw_to_bmi {
+margin-top: 10px;
+margin-left: 120px;
+}
+#result {
+border: 1px solid red;
+margin-top: 10px;
+padding: 15px;
+}
+#bb {
+margin-left: 105px;
+}	
+</style>
+</head>
+<body>
+<div id="hoctudau">
+<form>
+<fieldset>
+<legend>Your Height (H) & Weight (W)</legend>
+<label for="human_height">H (m): </label><input id="human_height" type="number" min = 0 />
+<label for="human_weight" id="bb">W (kg): </label><input id="human_weight" type="number" min = 0/>
+</fieldset>
+<input type="button" onclick="convert();" id="convert_hw_to_bmi" value="Nhập chiều cao, cân nặng rồi bấm vào đây để tính BMI" />
+<div id="result"></div>
+<thead>
+<script>
+function convert() {
+	var H = parseFloat(document.getElementById("human_height").value);
+	var W = parseFloat(document.getElementById("human_weight").value);
+	var bmi = W / (H * H);
+	if (bmi < 18)
+    	document.getElementById("result").innerHTML = "Thiếu cân";
+		else if (bmi > 18.0 && bmi < 25.0 )
+		    document.getElementById("result").innerHTML ="Bình thường";
+		else if (bmi >25 && bmi <30.0)
+		    document.getElementById("result").innerHTML ="Thừa cân";
+		else
+		    document.getElementById("result").innerHTML ="Mập";
+}
+</script>
+</body>
+</html>
