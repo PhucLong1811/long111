@@ -1,0 +1,35 @@
+<!-- nhập chuỗi ->>> đổi chữ hoa thành chữ thường. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var a = prompt();
+		var chuoi = a.toString();
+		var chuhoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		var chuthuong = 'abcdefghijklmnopqrstuvwxyz';
+		var ketqua = [];
+		for (var i = 0; i < chuoi.length; i++) {
+			if(chuhoa.indexOf(chuoi[i]) !== -1)
+		    {
+		     mang[i]=mang[i].toLowerCase();
+		    }//chuyển chữ hoa thành thường
+		  
+		    else 
+		    {
+		      ketqua.push(chuoi[i]);
+		    }
+		  }
+		document.write(ketqua.join(''));
+		console.log(ketqua.join(''));
+		document.write("<br>")
+		document.write("<br>")
+
+	</script>
+</body>
+</html>

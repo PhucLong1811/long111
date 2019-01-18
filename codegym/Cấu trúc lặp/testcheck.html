@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body >
+    <div align="center">
+        <img width="600px" src="anh/00.jpg" height="100px" onclick="kich(1);"  id="img11" >
+      <br>
+        <img width="600px" src="anh/11.jpg" height="100px" onclick="kich(2);"  id="img12" >
+      <br>
+        <img width="600px" src="anh/11.jpg" height="100px" onclick="kich(3);"  id="img13" >
+      <br>
+        <img width="600px" src="anh/33.jpg" height="100px" onclick="kich(4);"  id="img14" >
+      <br>
+        <img width="600px" src="anh/44.jpg" height="100px" onclick="kich(5);"  id="img15" >
+     <br>
+    </div>
+    <script type="text/javascript">
+        var images1 = [
+    	"anh/00.jpg",
+        "anh/1.jpg"];
+    var images2 = [
+    	"anh/11.jpg",
+        "anh/2.jpg"];
+    var images3 = [
+    	"anh/22.jpg",
+        "anh/3.jpg"];
+    var images4 = [
+    	"anh/33.jpg",
+        "anh/4.jpg"];   
+    var images5 = [
+    	"anh/44.jpg",
+        "anh/5.jpg"];
+        function getRandomInt() {
+          return Math.floor(Math.random()*2);
+        }
+        function kich(a) {
+            switch(a){
+                case 1:
+                document.getElementById("img11").src = images1[getRandomInt()];
+                break;
+                case 2:
+                document.getElementById("img12").src = images2[getRandomInt()];
+                break;
+                case 3:
+                document.getElementById("img13").src = images3[getRandomInt()];
+                break;
+                case 4:
+                document.getElementById("img14").src = images4[getRandomInt()];
+                break;
+                case 5:
+                document.getElementById("img15").src = images5[getRandomInt()];
+            	}
+            	if  ( 
+					document.getElementById("img11").src.substr(-6 , 6) == "00.jpg" &&
+					document.getElementById("img12").src.substr(-6 , 6) == "11.jpg" &&
+					document.getElementById("img13").src.substr(-6 , 6) == "22.jpg" &&
+					document.getElementById("img14").src.substr(-6 , 6) == "33.jpg" &&
+					document.getElementById("img15").src.substr(-6 , 6) == "44.jpg" ) 
+					{
+						alert("Đúng");
+
+				}
+
+        }
+    </script>
+</body>
+</html>

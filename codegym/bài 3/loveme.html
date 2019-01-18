@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		
+	</style>
+</head>
+<body>
+	<h1 id="tieude">Bạn có bị bê đê không</h1>
+	<input type="button" value=" Có " id="CO" onclick="yesClick()" >
+	<input type="button" id="btnNo" value="  Không  "  id="khong" onmouseover="noHover()" style="position:absolute;">
+	<script>
+		
+    function yesClick()
+    {
+        alert("Chào Mừng bạn tới động Gay");
+    }
+    function noHover()
+    {
+        var x = Math.round(Math.random() * window.innerWidth);
+        var y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('btnNo').style.left = x + 'px';
+        document.getElementById('btnNo').style.top = y + 'px';
+    }
+    
+	</script>
+</body>
+</html>

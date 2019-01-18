@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<style>
+#table1 {
+width: 600px;
+margin: 40px auto;
+background: #808080;
+padding: 30px;
+}
+#feet{
+	padding: 30px;
+	margin-left: 30px;
+}
+#meters{
+	padding: 30px;
+	margin-left: 69px;
+}
+</style>
+</head>
+<body>
+	<div id="table1">
+	<input id="feet" type="number"  oninput="feetToMeter(this.value)" onchange="feetToMeter(this.value)">   
+	<input id="meters" type="number" oninput="metersToFeet(this.value)" onchange="metersToFeet(this.value)">
+	</div>
+	<script>
+	function feetToMeter(valFeet) {
+	  valFeet = parseFloat(valFeet);
+	  document.getElementById("meters").value = 0.305 * valFeet;
+	}
+	function metersToFeet(valMeter) {
+	  valMeter = parseFloat(valMeter);
+	  document.getElementById("feet").value = 3.279 * valMeter;
+	}
+</script>
+</body>
+</html>

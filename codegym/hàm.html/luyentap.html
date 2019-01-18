@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- luyện tập bài 1 -->
+	<script>
+		alertMessage();
+		function alertMessage(){
+			alert("Xin Chào");
+		}
+	</script>
+	<!-- luyện tập bài 2 -->
+	<script>
+		var number = 0;
+		function abc(number){
+			number += 1;
+		}alert(number);
+	</script>
+	<!-- luyện tập bài 3 -->
+	<script>
+		var number1 = parseInt(prompt("nhập số:"));
+		var number2 = parseInt(prompt("nhập số:"));
+		var tong = 0;
+		abc();
+		function abc(){
+			if (number1 > number2) {
+				alert("DONE");
+			}else if (number1 < number2) {
+				tong = number1+number2;
+				alert(tong);
+			}
+		}
+	</script>
+	<!-- luyện tập bài 4 -->
+	<script>
+		result = 0;
+		alert(result);
+		result = addNumbers(); 
+		function addNumbers() {
+		    firstNum = 4;
+		    secondNum = 8;
+		    result = firstNum + secondNum;
+		    alert(result)
+		    return result;
+		    
+		}
+	</script>
+	<!-- luyện tập bài 5 -->
+	<script>
+		var nhap = prompt("nhap : ");
+		var tenngoisao = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+		var tenchomsao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major",  "Leo"];
+		myFunction();
+		function myFunction(){
+			for (var i=0; i < tenngoisao.length;i++){
+				switch (nhap){
+					case tenngoisao[i]:
+					alert(tenchomsao[i]);
+					break;
+					case tenchomsao[i]:
+					alert(tenngoisao[i]);
+					break;
+				}			
+			}
+		}
+	</script>
+</body>
+</html>

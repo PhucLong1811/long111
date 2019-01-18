@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var nhapso = prompt("nhap : ");
+		myFunction();
+		function myFunction(){
+			binhphuong = nhapso*nhapso;
+			alert(binhphuong);
+		}
+	</script>
+	<script>
+		var number = prompt("nhập bán kính : ");
+		hinhtron();
+		function hinhtron(){
+			chuvi = (number*2)*3.14;
+			dientich = (number*number)*3.14;
+		}
+		alert(chuvi);
+		alert(dientich);
+	</script>
+	<script>
+		var number = prompt("nhập số :");
+		var giaithua = 1;
+		tinhgiaithua();
+		function tinhgiaithua(){
+			for(i=1;i<=number;i++){
+				giaithua *= i;
+
+			}
+
+		}alert(giaithua);
+	</script>
+	<script>
+		var nhap = parseInt(prompt("nhap : "));
+		kiemtra();
+		function kiemtra(){
+			if (nhap % 1 !=0 ) {
+				alert("flase");
+			}else if (nhap % 1 ==0) {
+				alert("true");
+			}
+		}
+	</script>
+	<script>
+		var so1 = parseInt(prompt("nhập số 1 : "));
+		var so2 = parseInt(prompt("nhập số 2 : "));
+		var so3 = parseInt(prompt("nhập số 3 : "));
+		sosanh();
+		function sosanh(){
+			if (so1 > so2 && so1 > so3) {
+				alert("số lớn nhất là : " + so1);
+			}else if (so2 > so3) {
+				alert("số lớn nhất là : " + so2);
+			}else{
+				alert("số lớn nhất là : " + so3);
+			}
+		}
+	</script>
+	<!-- luyện tập bài 6 -->
+	<script> 
+		var nhapkytu = prompt("nhập ký tự : ");
+		ktkytu();
+		function ktkytu(){
+			if (nhapkytu == "a" || nhapkytu == "i" || nhapkytu == "o" || nhapkytu == "e" || nhapkytu =="u" || nhapkytu == "A" || nhapkytu == "I" || nhapkytu == "O" || nhapkytu == "E" || nhapkytu =="U" ) {
+				alert(true);
+			}else {
+				alert(false);
+			}
+		}
+	</script>
+	<!-- luyện tập bài 7 -->
+	<script>
+		var mang = [];
+		doicho();
+		function doicho(){
+			var i = 0;
+			while(i<2){
+				var so = parseInt(prompt("Nhập số nguyên bất kỳ : "));
+				i++;
+				mang.push(so);
+			}
+			mang.reverse();
+		}
+		alert(so);
+		alert(mang);
+	</script>
+	<!-- luyện tập bài 8 -->
+	<script>
+		
+	</script>
+</body>
+</html>

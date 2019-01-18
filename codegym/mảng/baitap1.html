@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		//bài 1
+		var mau = ["Red", "Green", "White", "Black"];
+		document.write(mau.join());
+		document.write("<br>")
+		document.write(mau.join("+"));
+		document.write("<br>")
+		document.write("<br>")
+		//bài 2
+		var a = window.prompt();
+		var b = a.toString();
+		var ketqua = [b[0]];
+		for (var i = 1; i < b.length; i++) {
+			if (b[i-1] % 2 === 0 && b[i] % 2 === 0) {
+				ketqua.push("-",b[i]);
+			}else{
+				ketqua.push(b[i]);
+			}
+		}
+		document.write(ketqua.join(''));
+		document.write("<br>")
+		document.write("<br>")
+		//bài 3
+		
+
+		str = 'Swap the case';
+		var chuhoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		var chuthuong = 'abcdefghijklmnopqrstuvwxyz';
+		var ketqua = [];
+		  
+		  for(var x=0; x<str.length; x++)
+		  {
+		    if(chuhoa.indexOf(str[x]) !== -1)
+		    {
+		      ketqua.push(str[x].toLowerCase());
+		    }//chuyển chữ hoa thành thường
+		    else if(chuthuong.indexOf(str[x]) !== -1)
+		    {
+		      ketqua.push(str[x].toUpperCase());
+		    }//chuyển chữ thường thành hoa
+		    else 
+		    {
+		      ketqua.push(str[x]);
+		    }
+		  }
+		document.write(ketqua.join(''));
+	</script>
+</body>
+</html>
