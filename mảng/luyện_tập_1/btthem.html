@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		   var num= [];
+		   var i = 0;
+		   while (i < 10){
+		       var so= prompt("nhap so");
+		       if (so % 2 ==0){
+		           num.push(so);
+		           i++;
+		       }
+		   }
+		   document.write(num +"<br>");
+		   num.splice(5,1);
+		   document.write(num);
+		   // splice(vị trí, bao nhiêu phần tử muốn xóa)
+	</script>
+</body>
+</html>
+<!-- 1 mang 10 phan tu co san -->

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<style>
+		table{
+			margin:auto;
+			background:#808080;
+		}
+		.cot{
+			border: none;
+		}
+		#btnXeploai{
+			margin-left: 180px;
+		}
+		div{
+			margin-left: 580px;
+		}
+	</style>
+ <table border='1' cellpadding="0" cellspacing="30px">
+   <tr>
+    <td class="cot"> Điểm Môn Hóa&nbsp; <input type='number' name="field" id="diem1"></td>
+   </tr>
+   <tr>
+    <td class="cot"> Điểm Môn Lý&nbsp;&nbsp;&nbsp; <input type='text' name="field" id="diem2"></td>
+   </tr>
+   <tr>
+    <td class="cot">Điểm Môn Toán <input type='text' name="field" id="diem3"></td>
+	</tr>
+ </table>
+  <div>
+  	<button onclick="DTB();">Tính điểm tb</button>
+  	<button onclick="Tong();">Tính điểm tổng</button>
+  </div>
+  <h3 id="Result" align="center"></h3>
+<body>
+	<script>
+		function DTB(){
+			var diem1 = parseInt(document.getElementById("diem1").value);
+			var diem2 = parseInt(document.getElementById("diem2").value);
+			var diem3 = parseInt(document.getElementById("diem3").value);
+			var Result = (diem1+diem2+diem3)/3;
+			document.getElementById("Result").innerHTML = "Dtb:" +Result;
+		}
+		function Tong(){
+			var diem1 = parseInt(document.getElementById("diem1").value);
+			var diem2 = parseInt(document.getElementById("diem2").value);
+			var diem3 = parseInt(document.getElementById("diem3").value);
+			var Result = (diem1+diem2+diem3);
+			document.getElementById("Result").innerHTML = "Dtb:" +Result;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		class Shape{
+			constructor(chieudai,chieurong,type){
+				this._chieudai = chieudai;
+				this._chieurong = chieurong;
+				this._type = type;
+			}
+			getDientich(){
+				alert("");
+			}
+			getChuvi(){
+
+			}
+		}
+		class Hinhvuong extends Shape{
+			constructor(type,canh){
+				super(type);
+				this._canh = canh;
+			}
+			getDientich(){
+				return this._canh * this._canh;
+			}
+		}
+		var shape1 = new Shape (10,20,"");
+		alert(shape1.type);
+		shape1.getDientich();
+		var hinhvuong = new Hinhvuong("HinhVuong",20);
+		hinhvuong._canh = 10;
+		alert(hinhvuong.getDientich());
+	</script>
+</body>
+</html>

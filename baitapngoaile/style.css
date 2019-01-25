@@ -1,0 +1,106 @@
+#logo img{
+	width: 80px;
+	height: 50px;
+}
+.menu3{
+	background: ;
+}
+.menu{
+	background: #0a64a0;
+	padding: 0px;
+}
+.menu ul li a{
+	font-size: 12px;
+	font-weight:bold;
+	color: #000;
+}
+.menu1{
+	background: #0a64a0;
+}
+.menu1 ul li a{
+	font-size: 12px;
+	font-weight:bold;
+	color: #000;
+	text-align: left;
+}
+.Slides {
+	display:none;
+	padding-top: 10px;
+
+}
+.mySlides {
+	display:none;
+	width: 200px;
+	height: 535px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+}
+.quancao{
+ padding-left: 15px;
+}
+.quancao h3{
+	background: #108de5;
+	font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+}
+.quancao ul{
+	margin-top: -10px;
+	border: 1px solid #ccc;
+	background: #ceedfe;
+}
+.quancao ul li{
+	list-style: none;
+}
+.quancao ul li a{
+	line-height: 45px;
+	text-indent: 25px;
+	color: #878787;
+}
+.quancao1{
+	margin-right: 20px;
+}
+.anhtt{
+	padding-top: 10px;
+}
+.tintuc div img{
+	float: left;
+	padding: 10px;
+}
+.tintuc div a{
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+.tintuc div span{
+	float: left;
+	font-size: 13px;
+}
+.tintuc div{
+	padding-bottom: 100px;
+}
+
+#top{
+	position: fixed;
+	right: 10px;
+	bottom: 25px;
+	display: none;
+}
+.top{
+	width: 25px;
+}
+@keyframes my { 
+	0% { color: blue;  } 
+	20% { color: red;  }
+	40% { color: violet;  } 
+	60% { color: yellow;  }
+	80% { color: green;  }
+	100% { color: gray;  }
+} 
+.test {
+	font-size:20px;
+	font-weight:bold;
+	-webkit-animation: my 700ms infinite;
+	
+}

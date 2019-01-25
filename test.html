@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="D:\bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <style>
+    table{
+      background: #808080;
+      margin: auto;
+    }
+    #Result{
+      width: 178px;
+    }
+    .btn{
+      width: 34px;
+      height: 32px;
+    }
+    #equ{
+      width:34px; 
+      height:66px;
+    }
+    #zero{
+      width: 70px;
+      height: 32px;
+    }
+  </style>
+   <table>
+    <tr>
+      <td colspan="5"><input id="Result" type="text"></td>
+    </tr>
+    <tr>
+      <td><input type="button" class="btn" value="7" onclick="changeMember()"></td>
+      <td><input type="button" class="btn" value="8" onclick="changeMember()"></td>
+      <td><input type="button" class="btn" value="9" onclick="changeMember()"></td>
+      <td><input type="button" class="btn" value="/" onclick="changeMember()"></td>
+      <td><input type="button" class="btn" value="%" onclick="changeMember()"></td>
+    </tr>
+    <tr>
+      <td><input type="button" class="btn" value="4" onclick="changeMember()"></td>
+      <td><input type="button" class="btn" value="5" onclick="changeMember()"></td>
+      <td><input type="button" class="btn" value="6" onclick="changeMember()"></td>
+      <td><input type="button" class="btn" value="*" onclick="changeMember()"></td>
+      <td><input type="button" class="btn" value="<" onclick="changeMember()"></td>
+    </tr>
+    <tr>
+      <td><input type="button" class="btn" value="1" onclick="changeMember()"></td>
+      <td><input type="button" class="btn" value="2" onclick="changeMember()"></td>
+      <td><input type="button" class="btn" value="3" onclick="changeMember()"></td>
+      <td><input type="button" class="btn" value="-" onclick="changeMember()"></td>
+      <td rowspan="2"><input type="button" id="equ" class="btn" value="=" onclick="changeMember()"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="button" id="zero" class="btn" value="0" onclick="changeMember()"></td>
+      <td><input type="button" class="btn" value="." onclick="changeMember()"></td>
+      <td><input type="button" class="btn" value="+" onclick="changeMember()"></td>      
+    </tr>
+   </table>
+   <script>
+     function changeMember(){
+      var r =Result.value+=this.value
+     }
+   </script>
+</body>
+</html>

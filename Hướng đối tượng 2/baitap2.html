@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    Thông tin: <span id="human"></span><br>
+    <input type="submit" value="Adam" onclick="ADAM(this.value);">
+    <button value="Adameat" onclick="adamEat(this.value)">Adameat</button>
+    <input type="submit" value="Eve" onclick="EVE(this.value)">
+    <button value="Eveeat" onclick="eveEat(this.value)">Eveeat</button><br>
+    Cân nặng: <span id="cannang"></span><br>
+    Trọng lượng táo: <span id="tao"></span>
+    <script>
+        class apple{
+            constructor (appleWeight){
+                this.appleWeight= appleWeight;
+            }
+            decrease(){
+                this.appleWeight--;
+
+                while (this.appleWeight == 0){
+                    if (this.appleWeight < 10) {
+                        this.appleWeight += 10;
+                    }
+                }
+                document.getElementById("tao").innerHTML= this.appleWeight;
+            }
+            empty(){
+                if (this.weight > 0){
+                    var check = true;
+                }
+                else check = false;
+            }
+        }
+        class human extends apple{
+            constructor(name,sex,HumanWeight,appleWeight){
+                super(appleWeight);
+                this.name = name;
+                this.sex = sex;
+                this.HumanWeight= HumanWeight;
+            }
+            Name(){
+                document.getElementById("human").innerHTML= this.name + " " + this.sex + " " + this.HumanWeight;
+            }
+            eat(){
+                this.HumanWeight++;
+                document.getElementById("cannang").innerHTML= this.HumanWeight;
+
+            }
+            say(){
+                alert("english");
+            }
+        }
+        var adam = new human("adam", "male", 60);
+        var tao = new apple(10);
+        var eve = new human("eve", "female", 49);
+        function ADAM(value){
+            if (value === "Adam") {
+                adam.say();
+                adam.Name();
+            }
+        }
+        function EVE(value){
+            if (value === "Eve") {
+                eve.say();
+                eve.Name();
+
+            }
+        }
+        function adamEat(value){
+            if (value === "Adameat") {
+                adam.eat();
+                tao.decrease();
+            }
+        }
+        function eveEat(value){
+            if (value === "Eveeat") {
+                eve.eat();
+                tao.decrease();
+            }
+        }
+        </script>
+    </body>
+    </html>

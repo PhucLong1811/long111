@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button id="BatTat" onclick="pushup(this.value)" value="abcd">on/off</button>
+	<button id="BatTat" onclick="charger(this.value)" value="sac">charger</button>
+	<script>
+		class flashlight{
+			constructor(energy, status){
+				this._energy = energy;
+				this._status = status;
+			}
+			switch(){
+				if(this._status === false){
+					this._status = true;
+					alert ("đã bật");
+				}
+				else {
+					this._status = false;
+					alert ("đã tắt");
+				}
+			}
+			EnergyConsume(){
+				while (this._status === true && this._energy > 0) {
+					this._energy-=1;
+				}
+				if (this._energy === 0) {
+					this._status = false;
+					alert("hết pin - tắt đèn - Sạc");
+				}
+			}
+			charging(){
+				while (this._energy < 100)
+					this._energy += 1;
+			}
+		}
+		var Campflash = new flashlight(100, false);
+		function pushup(value){
+			if (value === "abcd") {
+				Campflash.switch();
+				Campflash.EnergyConsume();
+				console.log(Campflash._energy);
+			}
+
+		}
+		function charger(value){
+			if (value=== "sac") {
+				Campflash.charging();
+				console.log(Campflash._energy);
+				alert("pin 100%")
+
+			}
+		}
+	</script>
+</body>
+</html>

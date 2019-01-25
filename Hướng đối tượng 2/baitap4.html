@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Caro</title>
+    <style>
+        button {
+            height: 25px;
+            width: 25px;
+            margin: 2px;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <p id="carogame">
+        <button id='"+i+"_"+j+"' onclick='mark(this.id)'>&nbsp;</button>
+    <script>
+        var b = document.getElementById("carogame");
+        var player = false;
+        const WIDTH = 5;
+        const HEIGHT = 5;
+        var board = [];
+        var data = '';
+            for (let i=0; i<HEIGHT; i++) {
+            data += '<br/>';
+            board[i]=new Array();
+            for (let j=0; j<WIDTH; j++) {
+                data += "+i+"_"+j+";
+            }            
+        }
+        b.innerHTML = data;
+        
+    </script>
+</body>
+</html>

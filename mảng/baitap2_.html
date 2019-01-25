@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<style>
+#table1 {
+width: 600px;
+margin: 40px auto;
+background: #808080;
+padding: 30px;
+}
+#tieng1{
+	padding: 30px;
+	margin-left: 30px;
+}
+#ketqua{
+	padding: 30px;
+}
+</style>
+</head>
+<body>
+	<div id="table1">
+	<input id="tieng1" type="text">   
+	<input type="button" onclick="convert();" id="phanbutton" value="Chuyển">
+	<input id="ketqua" type="text">
+	</div>
+	<script>
+	function convert() {
+		var nhap = document.getElementById("tieng1").value;
+		var tienganh = ["hello","goodbye","dog","cat","convert"];
+		var tiengviet = ["xin chào", "tạm biệt","chó","mèo","đổi"];
+		for (var i=0; i<tienganh.length;i++){
+			switch (nhap){
+				case tiengviet[i]:
+				document.getElementById("ketqua").value = tienganh[i];
+				break;
+				case tienganh[i]:
+				document.getElementById("ketqua").value = tiengviet[i];
+				break;
+				
+			}			
+		}
+
+	 }
+
+	</script>
+</body>
+</html>

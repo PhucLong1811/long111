@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div id="game">
+	</div>
+	<script>
+		class Hero{
+			constructor(image, top, left, size){
+				this.image =image;
+				this.top = top;
+				this.left = left;
+				this.size = size;
+			}
+			getHeroElement(){
+				return '<img width="'+ this.size + '"' +' height="'+ this.size + '"' +' src="' + this.image +'"' +' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+			}
+			moveRight(){
+				if (hero.left < window.innerWidth - hero.size && hero.left < window.innerHeight) {
+					this.left += 50;
+				}else if(hero.left = window.innerWidth - hero.size ){
+					this.left +=50;
+				}
+				console.log('ok: ' + this.left);
+			}
+		}
+		var hero = new Hero('1.png',20, 30, 100);
+		function start(){
+			hero.moveRight();
+			document.getElementById('game').innerHTML = hero.getHeroElement();
+			setTimeout(start, 100)
+		}
+
+		start();
+	</script>
+</body>
+</html>

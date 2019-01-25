@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style>
+		#a{
+			padding: 90px;
+		}
+	</style>
+</head>
+<body>
+	<center>
+            <h2>Gõ Từ Sẽ Thấy Bất Ngờ</h2>
+            <form name="nhap_chu">
+                <input name="txt" id="a" onkeydown="nhap();"></input>
+            </form>
+        </center>
+	<script>
+        var n="";
+		var nhap_chu=[];
+            nhap_chu[1]='T';nhap_chu[2]='Ô';nhap_chu[3]='I';nhap_chu[4]=' ';
+            nhap_chu[5]='L';nhap_chu[6]='À';nhap_chu[7]=' ';
+            nhap_chu[8]='M';nhap_chu[9]='Ộ';nhap_chu[10]='T';nhap_chu[11]=' ';
+            nhap_chu[12]='Đ';nhap_chu[13]='Ứ';nhap_chu[14]='A';nhap_chu[15]=' ';
+            nhap_chu[16]='N';nhap_chu[17]='G';nhap_chu[18]='Ố';nhap_chu[19]='C';
+            nhap_chu[20]='!';nhap_chu[21]='!';
+            nhap_chu[22]='!';
+            function nhap(){
+                var t = document.nhap_chu.txt.value;
+                var j = t.length;
+                if(j > 0)
+                {
+                    for(var i=1; i<=j; i++)
+                    {
+                        n = n + nhap_chu[i];
+                        if(i == 22)
+                        {
+                            document.nhap_chu.txt.value = "";
+                            n = "";
+                        }
+                    }
+                }
+                document.nhap_chu.txt.value = n;
+                n="";
+            }
+	</script>
+</body>
+</html>

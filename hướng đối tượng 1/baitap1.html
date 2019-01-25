@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<canvas id="myCanvas" width="500px" height="400px" style="border:2px solid #d3d3d3;"></canvas>
+	<script>
+		var Rectangle = function(dai,rong){
+			this.getRong = function(){
+				return this.rong;
+			}
+			this.getDai = function(){
+				return this.dai;
+			}
+			this.getChuvi = function(){
+				return (dai+rong)*2;
+			}
+			this.getDientich = function(){
+				return (dai*rong);
+			}
+		};
+		var Rectangle = new Rectangle(8,4);
+		var chuvi = Rectangle.getChuvi();
+		var dientich = Rectangle.getDientich();
+		alert("chuvi :" + chuvi + " " + "dien tich :" + dientich);
+		var ctx = document.getElementById("myCanvas").getContext("2d");
+		ctx.rect(20,20,350,100);
+		ctx.stroke();
+	</script>
+</body>
+</html>

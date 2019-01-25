@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    Trạng thái: <span id='trangthai' ></span></br>
+    <span>Lần bật:</span>
+    <input type="number" id="soDem" min="0" max="10"></br>
+    <input type="submit" value="switchON" onclick="ON(this.value)">
+    <input type="submit" value="switchOFF" onclick="OFF(this.value)">
+    <script>
+        class switch1{
+            constructor(status,type){
+                this.status = status;
+                this._type = type;
+            }
+            switchOn(){
+                if (this.status === false) {
+                    this.status = true;
+                    document.getElementById('trangthai').innerHTML= "on";
+                }
+            }
+            switchOff(){
+                if (this.status === true) {
+                    this.status = false;
+                    document.getElementById('trangthai').innerHTML= "off";
+                }
+            }
+        }
+        class Lamp extends switch1{
+            constructor(status,lanBat,lanTat){
+                super(status);
+                this.lanBat = lanBat;
+                this.lanTat = lanTat;
+            }
+            turnOn(){
+                if (this.lanBat <= 10 && this.status === true ){
+                    this.lanBat--;
+                    document.getElementById('soDem').value= this.lanBat;
+                    if(this.lanBat == 0){
+                        this.lanBat++;
+                        alert ("Đã bật 10 lần");
+                    }
+                }
+
+            }
+            turnOff(){
+                if (this.lanTat <= 10 && this.status === false){
+                    this.lanTat--;
+                    if(this.lanTat == 0){
+                        this.lanTat++;
+                        alert ("Đã tắt 10 lần");
+                    }
+                }
+            }
+
+        }
+        var congTac = new switch1(false, "electric");
+        var electricLamp = new Lamp(false, 10, 10);
+        document.getElementById('trangthai').innerHTML= "off";
+        document.getElementById('soDem').innerHTML= "10";
+        function ON(value){
+            if (value === "switchON" ){
+                electricLamp.switchOn();
+                electricLamp.turnOn();
+            }
+        }
+        function OFF(value){
+            if (value === "switchOFF"){
+                electricLamp.switchOff();
+                electricLamp.turnOff();
+            }
+        }
+
+    </script>
+</body>

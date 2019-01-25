@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+   var number=parseInt(prompt("So luong so nguyen to"));
+   var num =2;
+   var slsnt= 0;
+   while(slsnt <= number){
+       if(num  === 2|| num === 3 || num === 5 || num  === 7){
+           num++;
+           slsnt ++;
+       }else {
+           if (num % 2 == 0|| num % 3 == 0 || num % 5 == 0 || num % 7== 0 ){
+       num++;
+           }else{
+            document.write(num);
+            document.write("</br>");
+            num ++;
+            slsnt++;
+
+           }
+
+       }
+   }
+</script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> 
+	<style>
+	#input{
+		padding: 70px;
+	}
+	#smsden{
+		padding: 5px;
+	}
+	#smsdi{
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 18px;
+	}
+	#power{
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 50px;
+	}
+	#send{
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 70px;
+	}
+	#input1{
+		padding: 70px;
+	}
+	#smsden1{
+		padding: 5px;
+	}
+	#smsdi1{
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 18px;
+	}
+	#power1{
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 50px;
+	}
+	#send1{
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 70px;
+	}
+</style>
+</head>
+<body>
+	<div class="container-fluid">
+	<div class="row">
+	<div class="col-lg-6">
+		<table border="1px;">
+			<tr>
+				<td>Trạng thái:<span id="trangthai"></span></td>
+				<td rowspan="2" align="center">Nokia</td>
+			</tr>
+			<tr>
+				<td>Pin <span id="Pin"></span></td>
+			</tr>
+			<tr>
+				<td rowspan="4"><input type="text" id="input"></td>
+				<td><input type="submit"  value="Power" id="power" onclick="powerN(this.value);"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Hộp thư đến" id="smsden" onclick="smsden();"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Hộp thư đi" id="smsdi" onclick="smsdi();"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Gửi" id="send" onclick="smsN();"></td>
+			</tr>
+			<tr>
+				<td colspan="2">Đọc :<span id="text"></span></td>
+			</tr>
+		</table>
+	</div>
+	<br><br><br>
+	<div class="col-lg-6">
+		<table border="1px;">
+			<tr>
+				<td>Trạng thái:<span id="trangthai1"></span></td>
+				<td rowspan="2" align="center">Iphone X</td>
+			</tr>
+			<tr>
+				<td>Pin <span id="Pin1"></span></td>
+			</tr>
+			<tr>
+				<td rowspan="4"><input type="text" id="input1"></td>
+				<td><input type="submit"  value="Power" id="power1" onclick="powerI(this.value);"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Hộp thư đến" id="smsden1" onclick="smsden1();"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Hộp thư đi" id="smsdi1" onclick="smsdi1();"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Gửi" id="send1" onclick="smsI();"></td>
+			</tr>
+			<tr>
+				<td colspan="2">Đọc :<span id="text1"></span></td>
+			</tr>
+		</table>
+	</div>
+	</div>
+</div>
+	<script>
+		class Mobile{
+			constructor(_type,_pin,_status){
+				this.type = _type;
+				this.pin = _pin;
+				this.status = _status;
+			}
+			checkStatus(){
+				if (this.status) {
+					document.getElementById("trangthai").innerHTML="On";
+				}else{
+					document.getElementById("trangthai").innerHTML="Off";
+				}
+			}	
+			checkStatus1(){
+				if (this.status) {
+					document.getElementById("trangthai1").innerHTML="On";
+				}else{
+					document.getElementById("trangthai1").innerHTML="Off";
+				}
+			}	
+			batTat(){
+				if (this.status) {
+					this.status = false;
+				}else{
+					this.status = true;
+				}
+			}
+			haoPin(){
+				this.pin -= 1;
+			}
+			sacPin(){
+				if (this.pin <=90) {
+					while (this.pin < 100)
+						this.pin+= 1;
+				}
+				return this.pin;
+			}
+		}
+		var Nokia = new Mobile("Nokia :",50,false);
+		var Iphone = new Mobile("Iphone :",60,false);
+		document.getElementById("Pin").innerHTML = Nokia.type +" "+ Nokia.sacPin() +"%";
+		document.getElementById("trangthai").innerHTML = "Off";
+		document.getElementById("trangthai1").innerHTML = "Off";
+		document.getElementById("Pin1").innerHTML = Iphone.type +" "+ Iphone.sacPin() +"%";
+
+		function powerN(value){
+			if (value === "Power") {
+				Nokia.batTat();
+			}Nokia.checkStatus();
+		}
+		function powerI(value){
+			if (value === "Power") {
+				Iphone.batTat();
+			}Iphone.checkStatus1();
+		}
+		var hopthudi = [];
+		var hopthuden = [];
+		function smsN(){
+			if (Nokia.status) {
+				var send = document.getElementById("input").value;
+				document.getElementById("smsdi").value = " Thư đi " + "("+hopthudi.push(send)+")";
+				document.getElementById("smsden1").value = "Thư đến" + "("+hopthuden.push(send)+")";
+				document.getElementById("Pin").innerHTML = Nokia.type +" "+ Nokia.haoPin() +"%";
+				document.getElementById("Pin").innerHTML = Nokia.type +" "+ Nokia.sacPin() +"%";
+			}else{
+				alert("Mở điện thoại lên đồ ngu");
+			}
+		}
+		var hopthudi1 = [];
+		var hopthuden1 = [];
+		function smsI(){
+			if (Iphone.status) {
+				var send1 = document.getElementById("input1").value;
+				document.getElementById("smsdi1").value = " Thư đi " + "("+hopthudi1.push(send1)+")";
+				document.getElementById("smsden").value = "Thư đến" + "("+hopthuden1.push(send1)+")";
+				document.getElementById("Pin1").innerHTML = Nokia.type +" "+ Nokia.haoPin() +"%";
+				document.getElementById("Pin1").innerHTML = Nokia.type +" "+ Nokia.sacPin() +"%";
+			}else{
+				alert("Mở điện thoại lên đồ ngu");
+			}
+		} 
+		function smsden(){
+			document.getElementById("text").innerHTML = hopthudi1;
+		}
+		function smsdi(){
+			document.getElementById("text").innerHTML = hopthudi;
+		}
+		function smsden1(){
+			document.getElementById("text1").innerHTML = hopthudi;
+		}
+		function smsdi1(){
+			document.getElementById("text1").innerHTML = hopthudi1;
+		}
+</script>
+</body>
+</html>

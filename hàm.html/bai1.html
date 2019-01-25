@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+<script>
+		function kiemtra_snt(n) {
+		if(n<2) {
+			return false;
+		}else {
+			var so = parseInt(Math.sqrt(n));
+			for(var i=2; i<=so; i++) {
+				if(n%i==0) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	var number = 10000;
+	for(var i=0; i<number; i++) {
+			if(kiemtra_snt(i)==true) {
+				document.write(i+" ");
+			}
+		}
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var Temperature = function(c){
+			if (c > - 274) {
+				this.getF = function(){
+					return F = (c*(9/5))+32;
+				}
+				this.getK = function(){
+					return K = (c+273.15);
+				}
+			}else {
+				alert("DONE");
+			}
+		};
+		var Temp = new Temperature(25);
+		var dof = Temp.getF();
+		var dok = Temp.getK();
+		document.write( "độ F :" + dof + " / " + "độ K :" + dok );
+	</script>
+	<script>
+		class Temperature{
+			constructor(F,K){
+				this.F = F;
+				this.K = K;
+			}
+			getF(){
+				return F = (c*(9/5))+32;
+			}
+			getK(){
+				
+			}
+		}
+	</script>
+</body>
+</html>

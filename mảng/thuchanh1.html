@@ -1,0 +1,35 @@
+
+ 	<!DOCTYPE html>
+ <html>
+ <head>
+     <meta charset=utf-8 />
+     <title>JS Bin</title>
+     <style>
+         body {padding-top:50px}
+     </style>
+ </head>
+ <body>
+	 <input type="text" id="txtValue">
+	 <input type="reset" value="reset">
+	 <input type="button" id="btnAdd" value="Add" onclick="them_mang();">
+	 <input type="button" id="btnDisplay" value="Display" onclick="hienthi_mang();">
+ 	 <div id="ketqua"></div>
+	<script>
+		var x = 0;
+		var array = [];
+		function them_mang() {
+	       array[x] = document.getElementById("txtValue").value;
+	       alert("Phần tử: " + array[x] + " Them " + x);
+	       x++;
+	       document.getElementById("txtValue ").value = "";
+		}
+		function hienthi_mang() {
+	        var e ="";  
+	        for (var i=0; i<array.length; i++) {
+	               e += "Phần Tử " + i + " = " + array[i] + "<br/>";
+	        }
+        	document.getElementById("ketqua").innerHTML = e;
+		}
+	</script>
+</body>
+</html>

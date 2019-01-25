@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<table align="center" >
+			<tr>
+				<th align="right">Hello</th>
+				<td><a id="name"></a></td>
+			</tr>
+			<tr>
+				<th align="right">Age</th>
+				<td><a id="age"></a></td>
+			</tr>
+			<tr>
+				<th align="right">Sex</th>
+				<td><a id="sex"></a></td>
+			</tr>
+			<div align="center">
+		<input type="submit" onclick="changeMemer('Long', 21 , true)" value="Long">
+		<input type="submit" onclick="changeMemer('Long', 21 , true)" value="Long">
+		<input type="submit" onclick="changeMemer('Long', 21 , true)" value="Long">
+	</div>
+	</table>
+	
+	<script>
+		function changeMemer(name, age, sex){
+			document.getElementByID("name").innerText = "name";
+			document.getElementByID("age').innerText = "age";
+			
+		}
+	</script>
+</body>
+</html>
