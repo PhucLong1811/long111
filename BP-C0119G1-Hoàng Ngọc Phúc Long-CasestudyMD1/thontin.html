@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="D:\bootstrap\css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<style>
+	.right{
+		position: absolute;
+		right: 60px;
+	}
+	.left{
+		background:#0A64EA;
+		height: 640px;
+	}
+	.left div:hover{
+		background:rgba(230, 230, 255,0.1);
+	}
+	.left div{
+		padding:0px;
+	}
+</style>
+</head>
+<body>
+	<div class="row">
+		<div class="col-lg-2">
+			<div class="left">
+				<div class="col-lg-12">
+					<h3 class="text-center" style="font-size: 40px; padding-top: 5px;">Quản Lý</h3>
+				</div>
+				<div class="col-lg-12 " style="margin-top: 120px; font-size: 20px; padding-left: 10px;">
+					<a href="thontin.html" style="color: #000">Quản lý thông tin</a>
+				</div>
+				<div class="col-lg-12 " style="margin-top: 20px; font-size: 20px; padding-left: 10px;">
+					<a href="" style="color: #000">Quản lý tin tức</a>
+				</div>
+				<div class="col-lg-12" style="margin-top: 20px; font-size: 20px; text-height: 30px; padding-left: 10px;">
+					<a href="dangnhap.html" style="color: #000">Logout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-10 p-2">
+			<div class="right">
+			<div class="col-lg-6" style="margin-bottom: 10px; margin-left: 55%; padding-top: 10px;">
+				<input type="text" id="username" style="border-radius: 10px; border: 1px solid #ccc;" class="btn btn-light">
+				<input type="password" id="password" style="border-radius: 10px; border: 1px solid #ccc;" class="btn btn-light">
+				<button onclick="Create()" id="Create1" style="border-radius: 10px; height: 95%; width: 17%; padding-bottom: 3px;" class="btn-outline-success">Tạo Mới</button>
+			</div>
+			<table class=" bg-primary" style="border-radius: 10px 10px 0px 0px;  10px;">
+				<thead style="line-height: 40px;" >
+					<th width="20%;">STT</th>
+					<th width="30%;">Tài khoản</th>
+					<th width="32%;">Mật khẩu</th>
+					<th width="800px" >Sửa</th>
+					<th></th>
+					<th width="100px;">Xóa</th>
+				</thead>
+				<tbody id="dataList" class="bg-success"></tbody>
+			</table>
+</div>
+		</div>
+	</div>
+	<script src="thongtin.js"></script>
+</body>
+</html>

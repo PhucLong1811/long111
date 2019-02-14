@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'GothamMedium';
+    src: url('../font1/font/GothamMedium.eot');
+    src: url('../font1/font/GothamMedium.eot?#iefix') format('embedded-opentype'),
+        url('../font1/font/GothamMedium.woff2') format('woff2'),
+        url('../font1/font/GothamMedium.woff') format('woff'),
+        url('../font1/font/GothamMedium.ttf') format('truetype'),
+        url('../font1/font/GothamMedium.svg#GothamMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url('../font1/font/GothamLight.eot');
+    src: url('../font1/font/GothamLight.eot?#iefix') format('embedded-opentype'),
+        url('../font1/font/GothamLight.woff2') format('woff2'),
+        url('../font1/font/GothamLight.woff') format('woff'),
+        url('../font1/font/GothamLight.ttf') format('truetype'),
+        url('../font1/font/GothamLight.svg#GothamLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+.fontgotham
+{
+    font-family: GothamLight;
+}
+.fontmedium
+{
+    font-family: GothamMedium;
+}
+.menu{
+	background: #0a64a0;
+	border-radius: 5px;
+}
+.anhlogo{
+	width: 100px;
+	padding-left: 5px;
+}
+.menu1 ul li a{
+	padding-left: 10px;
+	padding-right: 40px;
+	font-size: 15px;
+	font-weight:bold;
+	color: #000;
+}
+.dropdown-toggle{
+	font-size: 15px;
+	font-weight:bold;
+	color: #000;
+	top: 7px;
+}
+.dropdown-menu{
+	position: absolute;
+	margin-top: 10px;
+	left: -60px;
+}
+.sli{
+	padding: 0px;
+	margin-top: 20px;
+}
+.Slides {
+	display:none;
+	margin-top: -10px;
+}
+.mySlides {
+	display:none;
+	width: 255px;
+	height: 535px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.quancao h3{
+	background: #108de5;
+	font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+}
+.quancao ul{
+	margin-top: -10px;
+	border: 1px solid #ccc;
+	background: #ceedfe;
+	line-height: 50px;
+
+}
+.quancao ul li a{
+	line-height: 30px;
+	font-size: 15px;
+	color: #000;
+}
+.quancao1{
+	position: absolute;
+	right: 5px;
+	padding-right: 10px;
+}
+.quancao1 h3{
+	background: #108de5;
+	font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+}
+.quancao1 ul{
+	margin-top: -10px;
+	border: 1px solid #ccc;
+	background: #ceedfe;
+}
+.quancao1 ul li{
+		padding-right: 15px;
+}
+.quancao1 ul li a{
+	font-size: 15px;
+	color: #000;
+	text-align: center;
+}
+.anhtt{
+	padding-top: 10px;
+}
+.tintuc div img{
+	float: left;
+	padding: 10px;
+}
+.tintuc div a{
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+.tintuc div span{
+	float: left;
+	font-size: 13px;
+}
+.tintuc div{
+	padding-bottom: 100px;
+}
+
+#top{
+	float: right;
+	bottom: 25px;
+	display: none;
+}
+.top{
+	width: 25px;
+}
+@keyframes my { 
+	0% { color: blue;  } 
+	20% { color: red;  }
+	40% { color: violet;  } 
+	60% { color: yellow;  }
+	80% { color: green;  }
+	100% { color: gray;  }
+} 
+.test a {
+	font-size:20px;
+	font-weight:bold;
+	-webkit-animation: my 700ms infinite;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.anhchinh{
+	width: 100%;
+	height: 250px;
+}
+.khung{
+	background: #E6E6E6;
+	font-weight: bold
+	font-size: 15px;
+	padding: 8px 12px;
+	border-radius: 0px 0px 10px 10px;
+}
+.tintuc1{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	transition: 0.6s ease;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+.ngay{
+	padding-left: 50px;
+	padding-bottom: 5px;
+	padding-top: 7px;
+}
+.time{
+	padding-left: 35%;
+	margin-bottom: 10px;
+	padding-top: 7px;
+}
+.body1{
+	background: #106fe5;
+	padding-left: 15px;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+.footer{
+	text-align:right; 
+	position: absolute;
+	right: 30px;
+	top: 20%;
+}
+.bodytrai{
+	padding: 0px
+}
+.quancaoanh{
+	position: absolute;
+	top: 150px;
+	left: 33%
+}
+.quancaoanh button{
+	position: absolute;
+	top: 5px;
+	left: 470px;
+}
+.container-1{
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+.search{
+	padding-left: 147px;
+}
+.search1{
+	border-radius: 10px;
+}
+.kinhlup{
+	width: 25px;
+	position: absolute;
+	top: 10px;
+	right: 18px;
+	border-radius: 50%;
+}
+#comment_add{
+	width: 100%;
+	border-radius: 15px;
+	height: 50px;
+}
+#an1{
+	border-radius: 50px 50px 50px 50px;
+}
